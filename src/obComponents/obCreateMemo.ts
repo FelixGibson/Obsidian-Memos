@@ -52,15 +52,15 @@ export async function waitForInsert(MemoContent: string, isTASK: boolean, insert
   const timeText = String(timeHour) + `:` + String(timeMinute);
 
   if (isTASK && DefaultMemoComposition === '') {
-    newEvent = `- [ ] ` + String(timeHour) + `:` + String(timeMinute) + ` ` + removeEnter;
+    newEvent = `- [ ] ` + removeEnter + ' ;; ';
   } else if (!isTASK && DefaultMemoComposition === '') {
-    newEvent = `- ` + String(timeHour) + `:` + String(timeMinute) + ` ` + removeEnter;
+    newEvent = `- ` + removeEnter + ' ;; ';
   }
 
   if (isTASK && DefaultMemoComposition != '') {
-    newEvent = `- [ ] ` + DefaultMemoComposition.replace(/{TIME}/g, timeText).replace(/{CONTENT}/g, removeEnter);
+    newEvent = `- [ ] ` + removeEnter + ' ;; ';
   } else if (!isTASK && DefaultMemoComposition != '') {
-    newEvent = `- ` + DefaultMemoComposition.replace(/{TIME}/g, timeText).replace(/{CONTENT}/g, removeEnter);
+    newEvent = `- ` + removeEnter + ' ;; ';
   }
 
   const dailyNotes = await getAllDailyNotes();

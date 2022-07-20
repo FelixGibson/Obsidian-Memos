@@ -21,12 +21,13 @@
     "obsidian-daily-notes-interface": "^0.9.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-popper": "^2.3.0",
     "tiny-undo": "^0.0.10"
   },
   "devDependencies": {
     "@honkhonk/vite-plugin-svgr": "^1.1.0",
     "@jukben/emoji-search": "^2.0.1",
-    "@popperjs/core": "^2.11.2",
+    "@popperjs/core": "^2.11.5",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "@types/recompose": "^0.30.10",
