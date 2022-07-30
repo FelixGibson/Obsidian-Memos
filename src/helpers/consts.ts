@@ -14,13 +14,15 @@ export const DAILY_TIMESTAMP = 3600 * 24 * 1000;
 
 // 标签 正则
 //eslint-disable-next-line
-export const TAG_REG = /\s#([\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
+export const TAG_REG = /\s#([\[\]\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
+// export const TAG_REG = /\s#([\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
+
 //eslint-disable-next-line
-export const FIRST_TAG_REG = /(<p>|<br>)#([\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
+export const FIRST_TAG_REG = /(<p>|<br>)#([\[\]\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
 //eslint-disable-next-line
-export const NOP_FIRST_TAG_REG = /^#([\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
+export const NOP_FIRST_TAG_REG = /^#([\[\]\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/gu;
 //eslint-disable-next-line
-export const ALL_TAG_REG = /([\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/u;
+export const ALL_TAG_REG = /([\[\]\p{Letter}\p{Emoji_Presentation}\p{Number}\/_-]+)/u;
 
 // URL 正则
 //eslint-disable-next-line
